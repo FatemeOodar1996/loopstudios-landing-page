@@ -21,7 +21,6 @@ header {
 }
 
 .navbar-nav {
-  background-color: var(--black);
   gap: 1.5rem;
 }
 .navbar-nav .nav-item {
