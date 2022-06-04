@@ -1,0 +1,326 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark_Gray: hsl(0, 0%, 55%);
+  --Very_Dark_Gray: hsl(0, 0%, 41%);
+  --Blue: hsl(228, 45%, 44%);
+  --Alta: "Alata", sans-serif;
+  --Josefin: "Josefin Sans", sans-serif;
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+.header .navbar-toggler {
+  padding: 0rem;
+}
+.header .navbar-collapse {
+  justify-content: flex-end;
+}
+.header .navbar-nav {
+  gap: 1.25rem;
+}
+.header .navbar-nav .nav-link {
+  position: relative;
+}
+.header .navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--White);
+}
+.header .navbar-nav .nav-link:hover::after {
+  width: 40%;
+}
+.header .title-container {
+  margin: 7.5rem 0;
+  color: var(--White);
+  width: min(100%, 700px);
+  border: 2px solid var(--White);
+  padding: 2.75rem 2.75rem 2rem;
+}
+.header .title-container .title {
+  margin-bottom: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1.5rem + 3vw, 4.75rem);
+}
+
+.vr {
+  display: flex;
+  margin: 9rem 3rem 0;
+  min-height: 600px;
+}
+.vr .vr-image {
+  height: 28rem;
+  width: auto;
+  position: relative;
+}
+
+.vr-description {
+  background-color: var(--White);
+  position: absolute;
+  z-index: 10;
+  right: 5rem;
+  bottom: -700px;
+  width: min(90%, 630px);
+  padding: 5rem;
+}
+.vr-description .title {
+  font-family: var(--Josefin);
+  text-transform: uppercase;
+  color: var(--Black);
+  font-size: 50px;
+  line-height: 3rem;
+  margin: 0rem;
+}
+.vr-description .description {
+  color: var(--Dark_Gray) !important;
+  width: min(92%, 455px);
+  color: var(--Black);
+  font-size: 15px;
+  margin: 0rem;
+  line-height: 2rem;
+  padding-top: 2rem;
+  margin-right: 0px !important;
+}
+
+.products .titr {
+  font-family: var(--Josefin);
+  text-transform: uppercase;
+  color: var(--Black);
+  font-size: 40px !important;
+  margin: 0rem;
+}
+.products button {
+  font-family: var(--Josefin);
+  text-transform: uppercase;
+  border: 1px solid var(--White);
+  color: var(--White);
+  padding: 0.25rem 2rem;
+  font-size: 12px;
+  cursor: pointer;
+  letter-spacing: 4px;
+  background-color: var(--White);
+}
+.products button:hover {
+  background-color: var(--Black);
+}
+.products .slider {
+  position: relative;
+  color: var(--Blue);
+  gap: 50px;
+  display: block;
+  cursor: pointer;
+}
+.products .slider:hover .image-wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 100;
+  display: block;
+}
+
+img {
+  width: 100%;
+}
+
+.text {
+  position: absolute;
+  bottom: 5%;
+  margin-bottom: 0px;
+  left: 40px;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-size: 19px;
+  font-family: var(--Josefin);
+  max-width: 100px;
+  height: 50px;
+}
+
+.responsive-button {
+  display: none !important;
+}
+
+footer {
+  background-color: var(--Black);
+  margin: 30px 0;
+}
+footer .information {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 15px;
+}
+footer .information .information a {
+  color: var(--White) !important;
+  text-decoration: none !important;
+}
+footer .information .footer-items {
+  display: flex;
+  gap: 20px;
+  padding: 0px;
+  margin-bottom: 0;
+  flex-direction: row;
+}
+footer .information .footer-items .items {
+  list-style-type: none;
+  color: var(--White) !important;
+  font-size: 14px;
+  text-decoration: none !important;
+}
+footer .information .footer-items .footer-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--White);
+}
+footer .information .footer-items .footer-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--White);
+}
+footer .information .footer-items .footer-link:hover::after {
+  width: 40%;
+}
+footer .social {
+  display: flex;
+  flex-direction: column;
+  color: var(--White);
+  gap: 30px;
+  font-size: 15px;
+  color: var(--Dark_Gray);
+}
+footer .social .items {
+  width: 40px;
+  height: auto;
+}
+footer .social .items img::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--White);
+}
+footer .social .items img:hover::after {
+  width: 10%;
+}
+footer .social .info {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 762px) {
+  .navbar .text {
+    font-size: 40px;
+  }
+
+  .vr {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    min-height: 600px;
+    justify-content: space-between;
+  }
+  .vr .vr-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vr .vr-element .vr-image {
+    height: auto;
+    width: min(90%, 400px);
+  }
+  .vr .vr-element .vr-description {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    position: inherit;
+    width: min(90%, 400px);
+    bottom: 0px;
+  }
+  .vr .vr-element .title {
+    font-size: 40px;
+  }
+  .vr .vr-element .description {
+    width: min(92%, 400px);
+    right: 0rem;
+  }
+
+  .deep-earth {
+    content: url(./images/mobile/image-deep-earth.jpg);
+  }
+
+  .night-arcade {
+    content: url(./images/mobile/image-night-arcade.jpg);
+  }
+
+  .soccer-team {
+    content: url(./images/mobile/image-soccer-team.jpg);
+  }
+
+  .grid {
+    content: url(./images/mobile/image-grid.jpg);
+  }
+
+  .from-above {
+    content: url(./images/mobile/image-from-above.jpg);
+  }
+
+  .pocket-borealis {
+    content: url(./images/mobile/image-pocket-borealis.jpg);
+  }
+
+  .image-curiosity {
+    content: url(./images/mobile/image-curiosity.jpg);
+  }
+
+  .fisheye {
+    content: url(./images/mobile/image-fisheye.jpg);
+  }
+
+  button {
+    display: none;
+  }
+
+  .responsive-button {
+    display: block !important;
+  }
+}
+.social {
+  margin-top: 2rem;
+}
+
+.footer-items {
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
